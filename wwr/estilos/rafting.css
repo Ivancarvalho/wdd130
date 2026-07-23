@@ -30,6 +30,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 3px solid var(--cor-secundaria);
 }
 
 nav, p, section, article {
@@ -49,6 +50,10 @@ header nav a {
   font-weight: bold;
 }
 
+header nav a:hover {
+  color: var(--cor-secundaria);
+}
+
 h1, h2 {
   font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
@@ -65,7 +70,7 @@ h1, h2 {
   height: auto;
 }
 
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
@@ -73,6 +78,16 @@ h1 {
   text-align: center;
   background-color: rgba(38, 70, 83, 0.8);
   color: #fff;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border: 1px solid var(--cor-secundaria);
 }
 
 .hero article img {
