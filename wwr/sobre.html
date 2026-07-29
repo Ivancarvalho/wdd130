@@ -8,6 +8,14 @@
   <meta name="description"
     content="Conheça a história e as aventuras oferecidas pela Rafting Aventura Extrema.">
   <meta name="author" content="Ivan Luis Freitas de Carvalho">
+
+  <!-- Importação de fontes no HTML (Regra da Auditoria) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="estilos/rafting.css">
 </head>
 
@@ -18,23 +26,24 @@
       <a href="index.html">Página Inicial</a>
       <a href="sobre.html">Sobre Nós</a>
       <a href="passeios.html">Passeios</a>
-      <a href="fale-conosco.html">Fale Conosco</a>
+      <a href="contato.html">Fale Conosco</a> <!-- Corrigido para contato.html -->
     </nav>
   </header>
 
   <main>
-    <!-- Seção Banner / Hero -->
-    <section class="hero-section">
+    <!-- DIV HERO (Regra da auditoria: div com classe hero) -->
+    <div class="hero">
+      <img src="imagens/hero-rafting.jpg" alt="Paisagem de corredeira com equipe de rafting"
+        class="hero-bg">
       <h1>Rafting Aventura Extrema</h1>
-      <div class="hero-box">
+      <article>
         <p>Nossa missão é proporcionar experiências inesquecíveis e seguras nas corredeiras mais
-          emocionantes do país, conectando você com a natureza pura e a adrenalina do rafting
-          profissional.</p>
-        <img src="imagens/hero-rafting.jpg" alt="Equipe praticando rafting">
-      </div>
-    </section>
+          emocionantes do país, conectando você com a natureza pura.</p>
+        <img src="imagens/logo.png" alt="Selo de Qualidade" class="hero-icon">
+      </article>
+    </div>
 
-    <!-- Seção História (Texto - Imagem - Texto) -->
+    <!-- SEÇÃO 1 (Exigência: Exatamente 2 seções no main) -->
     <section class="historia-section">
       <h2>História</h2>
       <div class="historia-grid">
@@ -49,7 +58,7 @@
       </div>
     </section>
 
-    <!-- Seção Aventura (5 Imagens com Legenda) -->
+    <!-- SEÇÃO 2 (Aventura) -->
     <section class="aventura-section">
       <h2>A aventura está te esperando!</h2>
       <div class="aventura-grid">
@@ -79,14 +88,15 @@
 
   <footer>
     <p>©2026 ❖ Rafting Aventura Extrema ❖ Ivan Luis Freitas de Carvalho</p>
-    <div class="social">
+    <!-- NAV do Rodapé (Regra da auditoria: nav com classe socialmedia) -->
+    <nav class="socialmedia">
       <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.png"
           alt="Facebook"></a>
       <a href="https://instagram.com" target="_blank"><img src="imagens/instagram.png"
           alt="Instagram"></a>
       <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin.png"
           alt="LinkedIn"></a>
-    </div>
+    </nav>
   </footer>
 </body>
 
