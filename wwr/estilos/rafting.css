@@ -1,12 +1,25 @@
+/* Importação de fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;700&display=swap');
+
+/* Variáveis com Cores Aprovadas no Contraste AA (WCAG) */
 :root {
-  --cor-primaria: #055a05;
-  --cor-secundaria: #f4a261;
-  --cor-destaque1: #264653;
-  --cor-destaque2: #e9c46a;
-  --fonte-titulo: "Georgia", "Times New Roman", serif;
-  --fonte-body: Arial, Helvetica, sans-serif;
+  --primary-color: #1b3b5f;
+  /* Azul escuro (Texto/Cabeçalhos) */
+  --secondary-color: #d96b27;
+  /* Laranja terracota */
+  --bg-color: #f4f6f8;
+  /* Fundo cinza claro */
+  --card-bg: #ffffff;
+  /* Fundo dos cartões */
+  --text-color: #222222;
+  /* Texto escuro de alto contraste */
+  --light-text: #ffffff;
+  /* Texto claro */
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 }
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -14,88 +27,191 @@
 }
 
 body {
-  font-family: var(--fonte-body);
-  color: var(--cor-destaque1);
-  background-color: #f9f9f9;
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-header, main, footer {
-  width: 840px;
+/* Envolvente principal centralizado */
+header,
+main,
+footer {
+  max-width: 960px;
   margin: 0 auto;
 }
 
+/* ===================================
+   CABEÇALHO (Header com CSS Grid)
+   =================================== */
 header {
-  background-color: var(--cor-primaria);
-  color: var(--cor-destaque2);
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  margin-top: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+header .logo {
+  width: 90px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Navegação com CSS Flexbox */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ===================================
+   CONTEÚDO PRINCIPAL (Main)
+   =================================== */
+main {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Seção Hero / Banner */
+.hero-section {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fafafa;
+}
+
+.hero-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 3px solid var(--cor-secundaria);
+  gap: 1.5rem;
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #fff;
 }
 
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+.hero-box img {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+/* Seção História (Grid de 3 Colunas: Texto - Imagem - Texto) */
+.historia-section {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #eee;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+.historia-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-header nav a:hover {
-  color: var(--cor-secundaria);
-}
-
-h1, h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--cor-primaria);
-  text-align: center;
-}
-
-.hero {
-  position: relative;
-}
-
-.hero img {
-  display: block;
+.historia-grid img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
+  border: 2px solid var(--primary-color);
 }
 
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
+/* Seção Aventura (5 figuras dispostas horizontalmente) */
+.aventura-section {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.aventura-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.aventura-grid figure {
+  flex: 1;
+  min-width: 130px;
   text-align: center;
-  background-color: rgba(38, 70, 83, 0.8);
-  color: #fff;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 16px;
-  border: 1px solid var(--cor-secundaria);
+.aventura-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 15px;
+.aventura-grid figcaption {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 5px;
+  color: var(--primary-color);
 }
 
-.redes-sociais a {
-  text-decoration: none;
+/* ===================================
+   RODAPÉ (Footer)
+   =================================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+footer .social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer .social img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+footer .social img:hover {
+  transform: scale(1.15);
 }
