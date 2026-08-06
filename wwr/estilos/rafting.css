@@ -371,3 +371,11 @@ footer .redes-sociais img {
 footer .redes-sociais img:hover {
   transform: scale(1.15);
 }
+
+.map-container iframe {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #eee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
