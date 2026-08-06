@@ -32,16 +32,15 @@ footer {
   margin: 0 auto;
 }
 
-/* ===================================
+/*
    CABEÇALHO (Header com CSS Grid)
-   =================================== */
+*/
 header {
   display: grid;
   grid-template-columns: 120px 1fr;
   align-items: center;
   background-color: var(--primary-color);
   color: var(--light-text);
-  /* Corrige erro de contraste */
   padding: 1rem 2rem;
   margin-top: 10px;
   border-radius: 8px 8px 0 0;
@@ -73,9 +72,9 @@ nav a:hover {
   background-color: var(--secondary-color);
 }
 
-/* ===================================
+/*
    CONTEÚDO PRINCIPAL (Main)
-   =================================== */
+*/
 main {
   background-color: var(--card-bg);
   padding: 2rem;
@@ -91,42 +90,35 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* ===================================
-   SOBREPOSIÇÃO DO HERO (Posição Absoluta/Relativa)
-   =================================== */
+/* 
+   SOBREPOSIÇÃO DO HERO
+*/
 .hero {
   position: relative;
-  /* Requisito da Auditoria */
   margin-bottom: 2rem;
   border: 1px solid #ccc;
   overflow: hidden;
 }
 
-/* Imagem de Fundo do Banner */
 .hero .hero-bg {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Título H1 sobrepondo a imagem */
 .hero h1 {
   position: absolute;
-  /* Requisito da Auditoria */
   top: 10%;
   width: 100%;
   text-align: center;
   color: var(--light-text);
   background-color: rgba(27, 59, 95, 0.7);
-  /* Fundo translúcido para contraste */
   padding: 1rem;
   margin: 0;
 }
 
-/* Caixa com Artigo sobrepondo a imagem */
 .hero article {
   position: absolute;
-  /* Requisito da Auditoria */
   bottom: 10%;
   right: 5%;
   width: 50%;
@@ -150,9 +142,9 @@ h2 {
   font-weight: 600;
 }
 
-/* ===================================
-   SEÇÃO HISTÓRIA
-   =================================== */
+/* 
+   SEÇÃO HISTÓRIA E AVENTURA
+*/
 .historia-section {
   border: 1px solid #ccc;
   padding: 1.5rem;
@@ -174,9 +166,6 @@ h2 {
   border: 2px solid var(--primary-color);
 }
 
-/* ===================================
-   SEÇÃO AVENTURA
-   =================================== */
 .aventura-section {
   border: 1px solid #ccc;
   padding: 1.5rem;
@@ -215,41 +204,8 @@ h2 {
 }
 
 /* ===================================
-   RODAPÉ (Footer)
-   =================================== */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-color);
-  color: var(--light-text);
-  padding: 1.5rem 2rem;
-  border-radius: 0 0 8px 8px;
-  margin-bottom: 20px;
-}
-
-footer p {
-  font-size: 0.95rem;
-}
-
-/* Classe de nav pedida na auditoria */
-.socialmedia {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
-
-.socialmedia img:hover {
-  transform: scale(1.15);
-}
-
-/*PÁGINA FALE CONOSCO (contato.html)*/
+   PÁGINA FALE CONOSCO (contato.html)
+*/
 .contact-info {
   text-align: center;
   margin-bottom: 2rem;
@@ -265,7 +221,6 @@ footer p {
   line-height: 1.4;
 }
 
-/* Coloca Mapa e Formulário lado a lado */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -281,7 +236,6 @@ footer p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo do Formulário */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -303,7 +257,6 @@ footer p {
   font-size: 1rem;
 }
 
-/* Botões de rádio (Agrupados) */
 .contact-form fieldset {
   border: none;
   display: flex;
@@ -318,7 +271,6 @@ footer p {
   margin-bottom: 0.5rem;
 }
 
-/* Checkbox */
 .contact-form .checkbox-label {
   display: flex;
   align-items: center;
@@ -327,7 +279,6 @@ footer p {
   margin-top: 0.5rem;
 }
 
-/* Botão Enviar */
 .contact-form button {
   background-color: #e0e0e0;
   color: #333;
@@ -347,7 +298,6 @@ footer p {
   border-color: var(--primary-color);
 }
 
-/* Seção dos Funcionários */
 .employees-section {
   background-color: #f4f6f8;
   padding: 2rem;
@@ -373,7 +323,6 @@ footer p {
   min-width: 150px;
 }
 
-/* Fotos Arredondadas */
 .employees-grid img {
   width: 120px;
   height: 120px;
@@ -388,20 +337,37 @@ footer p {
   color: var(--text-color);
 }
 
+/* 
+   RODAPÉ (Footer Unificado e Otimizado)
+*/
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 0.95rem;
 }
 
 footer .redes-sociais {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 footer .redes-sociais img {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+footer .redes-sociais img:hover {
+  transform: scale(1.15);
 }
