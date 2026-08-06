@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título e Meta Description Atualizados para Fale Conosco -->
+    <title>Fale Conosco | Rafting Aventura Extrema</title>
+    <meta name="description"
+      content="Entre em contato com a Rafting Aventura Extrema. Informações de endereço, telefone e formulário de atendimento ao cliente.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logotipo Rafting Aventura Extrema" class="logo">
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="passeios.html">Passeios</a>
+            <a href="contato.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Informações da Empresa -->
+        <div class="contact-info">
+            <h1>Companhia de Rafting em Corredeiras</h1>
+            <p>123 Rua Principal do Rio<br>
+                Foz do Iguaçu, Paraná<br>
+                +55 45 99999-9999<br>
+                info@corredeiras.com</p>
+        </div>
+
+        <!-- Grid que separa o Mapa (Esquerda) e o Formulário (Direita) -->
+        <div class="contact-grid">
+            <!-- Mapa do Google incorporado (Sem style inline) -->
+            <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115233.15550269229!2d-54.673846663595565!3d-25.501980838183145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f690ebac2307ef%3A0xc3f6067cb44331e5!2sFoz%20do%20Igua%C3%A7u%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr"
+                  width="100%" height="450" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Formulário de Contato -->
+            <form class="contact-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite aqui" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite aqui" required>
+
+                <fieldset>
+                    <legend>Propósito da Mensagem:</legend>
+                    <label><input type="radio" name="proposito" value="geral" checked> Dúvida
+                        Geral</label>
+                    <label><input type="radio" name="proposito" value="reserva"> Pergunta sobre
+                        Reserva</label>
+                    <label><input type="radio" name="proposito" value="sugestao"> Sugestão</label>
+                </fieldset>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite aqui"
+                  required></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter"> Por favor, me inscreva na newsletter
+                    mensal
+                </label>
+
+                <!-- Botão customizado -->
+                <button type="submit">Entrar em Contato!</button>
+            </form>
+        </div>
+
+        <!-- Seção dos Funcionários -->
+        <section class="employees-section">
+            <h2>Estamos Aqui para Serví-lo</h2>
+            <div class="employees-grid">
+                <figure>
+                    <img src="imagens/funcionario1.jpg" alt="Foto do Guia João">
+                    <figcaption>João Silva<br>Guia Sênior</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/funcionario2.jpg" alt="Foto da Instrutora Maria">
+                    <figcaption>Maria Souza<br>Instrutora de Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/funcionario3.jpg" alt="Foto do Gerente Pedro">
+                    <figcaption>Pedro Alves<br>Gerente de Base</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2026 ❖ Rafting Aventura Extrema ❖ Ivan Luis Freitas de Carvalho</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.png"
+                  alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="imagens/instagram.png"
+                  alt="Instagram"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin.png"
+                  alt="LinkedIn"></a>
+        </nav>
+    </footer>
+</body>
+
+</html>
