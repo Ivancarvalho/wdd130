@@ -72,7 +72,7 @@ nav a:hover {
   background-color: var(--secondary-color);
 }
 
-/*
+/* 
    CONTEÚDO PRINCIPAL (Main)
 */
 main {
@@ -92,7 +92,7 @@ h2 {
 
 /* 
    SOBREPOSIÇÃO DO HERO
-*/
+   */
 .hero {
   position: relative;
   margin-bottom: 2rem;
@@ -144,7 +144,7 @@ h2 {
 
 /* 
    SEÇÃO HISTÓRIA E AVENTURA
-*/
+    */
 .historia-section {
   border: 1px solid #ccc;
   padding: 1.5rem;
@@ -203,9 +203,9 @@ h2 {
   color: var(--primary-color);
 }
 
-/* ===================================
+/* 
    PÁGINA FALE CONOSCO (contato.html)
-*/
+  */
 .contact-info {
   text-align: center;
   margin-bottom: 2rem;
@@ -230,6 +230,7 @@ h2 {
 }
 
 .map-container iframe {
+  width: 100%;
   border: none;
   border-radius: 8px;
   background-color: #eee;
@@ -339,7 +340,7 @@ h2 {
 
 /* 
    RODAPÉ (Footer Unificado e Otimizado)
-*/
+  */
 footer {
   display: flex;
   justify-content: space-between;
@@ -370,12 +371,4 @@ footer .redes-sociais img {
 
 footer .redes-sociais img:hover {
   transform: scale(1.15);
-}
-
-.map-container iframe {
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  background-color: #eee;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
